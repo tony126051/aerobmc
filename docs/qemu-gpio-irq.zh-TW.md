@@ -1,5 +1,7 @@
 # QEMU 虛擬 GPIO、IRQ 與逾時驗證
 
+本頁驗證 AeroBMC 最小可行核心在模擬 GPIO 上的中斷、截止時間與電源狀態轉移。 [專案定位](../README.md)
+
 ## 共用電源狀態機
 
 電源狀態機已移入 `axbmc-core`，確定性重播與 Linux／ArceOS 的 PL061 客體都呼叫同一份實作。GPIO0 反映狀態機的使能輸出，GPIO3 提供 IRQ 時間戳與處理當下的電位。客體的控制任務依序處理 IRQ 與逾時。

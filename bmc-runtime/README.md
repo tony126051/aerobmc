@@ -1,5 +1,7 @@
 # AeroBMC Runtime
 
+本 Runtime 是 AeroBMC 在 QEMU 上的最小可行核心（minimal viable core）。實驗聚焦於精簡底層控制與事件路徑，並測量反應延遲與抖動。OpenBMC 整合驗收沿用上游服務，驗收範圍以本文列出的模擬工作負載及介面為準。 [專案定位](../README.md)
+
 獨立 Rust 專案。第一個可執行版本提供常駐控制迴路、模擬事件輸入及本機 HTTP。控制迴路持有可變狀態，HTTP 讀取已發布的快照。逾時判定由控制迴路執行。
 
 ```sh

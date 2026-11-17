@@ -1,5 +1,7 @@
 # Linux 與 ArceOS 在 AArch64 QEMU 的感測器重播
 
+本頁核對 AeroBMC 最小可行核心在 Linux 與 ArceOS 模擬環境的感測器事件一致性。 [專案定位](../README.md)
+
 2026-11-11。Linux 和 ArceOS 各獨立開機三次。每次都輸出相同的六個事件，序號、邏輯時間、感測器 ID 與前後狀態逐行符合 `traces/sensor.expected.csv`。
 
 | 輸入 | Linux 中位數（範圍） | ArceOS 中位數（範圍） | ArceOS 耗時減少 |

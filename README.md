@@ -1,6 +1,6 @@
 # AeroBMC
 
-AeroBMC 是一個以 ArceOS 為優先後端、Linux 為基準的 BMC 模擬專案。以 Rust 實作管理核心，透過 D-Bus 與上游 OpenBMC 的 ObjectMapper、bmcweb 和 phosphor-state-manager 整合。開發與驗收均使用軟體模擬，主目標為 QEMU AArch64 `virt`，`raspi4b` 作為補充開機驗證。
+AeroBMC 是一項局部架構實驗，探索如何精簡 OpenBMC 底層管理路徑的軟體層次，並改善時間敏感工作的反應延遲與抖動。實作範圍限定為在 QEMU 中執行的 Rust 最小可行核心（minimal viable core），以 ArceOS 為優先後端、Linux 為比較基準。整合驗證沿用上游 OpenBMC 的 ObjectMapper、bmcweb 與 phosphor-state-manager。完整 OpenBMC 發行版的功能與硬體部署超出本實驗範圍。
 
 - [套件相依性、架構選項與階段驗收](docs/openbmc-porting-plan.zh-TW.md)
 - [已查閱建置檔的相依性快照](docs/upstream-build-evidence.json)

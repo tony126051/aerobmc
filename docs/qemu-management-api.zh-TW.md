@@ -1,5 +1,7 @@
 # 唯讀管理 API 與 PWM／tach 模型
 
+本頁記錄 AeroBMC 最小可行核心的模擬狀態查詢與風扇模型。 [專案定位](../README.md)
+
 Linux 與 ArceOS 使用同一份管理程式與 `axbmc-core` 模型。在 QEMU AArch64 `virt` 上以 HTTP 查詢 `GET /v1/status`，回應包含感測器溫度與狀態、電源使能與狀態，以及風扇的 RPM、PWM duty、週期、取樣電位和保護狀態。溫度欄位使用毫攝氏度。RPM 無有效量測時回傳 JSON `null`。
 
 | 請求 | 回應 |

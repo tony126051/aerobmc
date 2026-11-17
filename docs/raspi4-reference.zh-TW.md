@@ -1,5 +1,7 @@
 # Raspberry Pi 4 Model B 參考公板
 
+本頁描述 AeroBMC 最小可行核心的補充模擬平台及早期公板研究。 [專案定位](../README.md)
+
 專案驗收採全軟體模擬。本頁的 Pi 4B 映像用於 QEMU `raspi4b` 開機驗證，治具與實板開機內容保留為先前的設計紀錄。
 
 Pi 4B 是 BMC-G1 的第一個參考公板。已完成 ArceOS 核心映像、Linux AArch64 重播程式與測試治具腳位草案。實板 revision、韌體、電氣與驅動驗證待取得板卡後完成。
