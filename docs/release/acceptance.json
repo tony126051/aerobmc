@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-17",
+  "scope": "QEMU Runtime and basic native OpenBMC integration",
+  "baseline_passed": true,
+  "romulus_working_copy": "fresh copy of SSH-provisioned reference image",
+  "romulus_systemd_runtime_watchdog_us": 0,
+  "baseline_power_event_sequences_match": true,
+  "resources_passed_per_backend": 6,
+  "interop_assertions_passed_per_backend": 34,
+  "limitations_exit_code": 1,
+  "etag_concurrent_writes_reproduced": {
+    "linux": true,
+    "arceos": true
+  },
+  "native_power_loss_reproduced": {
+    "linux": true,
+    "arceos": true
+  },
+  "all_known_limitations_reproduced_on_both_backends": true
+}

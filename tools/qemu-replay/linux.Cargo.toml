@@ -1,0 +1,11 @@
+[package]
+name = "bmc-qemu-replay"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+axbmc-core = { path = "axbmc-core" }
+
+[profile.release]
+lto = true
+codegen-units = 1

@@ -1,0 +1,9 @@
+# time_ns,action,value_millicelsius
+0,sample,70000
+100000000,sample,80000
+200000000,sample,79000
+300000000,sample,75000
+400000000,sample,error
+500000000,sample,0
+1499999999,tick,-
+1500000000,tick,-

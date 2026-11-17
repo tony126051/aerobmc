@@ -1,0 +1,145 @@
+{
+  "passed": false,
+  "linux": {
+    "power": {
+      "native_state_manager": true,
+      "statuses": {
+        "On": 204,
+        "PowerCycle": 204
+      },
+      "confirmed_power": {
+        "On": "On",
+        "PowerCycle": "On"
+      },
+      "events": [
+        "power_started",
+        "power_on",
+        "power_stopped",
+        "power_started",
+        "power_on",
+        "power_good_lost"
+      ],
+      "unexpected_loss": {
+        "passed": false,
+        "redfish_at_loss": "On",
+        "automatic_restart": false,
+        "restart_window_seconds": 3,
+        "redfish_after_recovery": null
+      }
+    },
+    "conformance": {
+      "anonymous": 401,
+      "invalid_token": 401,
+      "reader_get": 200,
+      "reader_reset": 403,
+      "reader_after_logout": 401,
+      "account_etag": {
+        "passed": false,
+        "stale_status": 412,
+        "writes": [
+          {
+            "status": 204
+          },
+          {
+            "status": 204
+          },
+          {
+            "status": 204
+          },
+          {
+            "status": 204
+          }
+        ],
+        "updated": true,
+        "payload_etag_matches": false
+      }
+    },
+    "validator_exit": {
+      "board": 0,
+      "system": 0,
+      "chassis": 0,
+      "sensors": 0,
+      "session": 0,
+      "fan": 0
+    },
+    "protocol": null,
+    "interop": {
+      "exit_code": 0,
+      "pass": 34,
+      "warn": 0,
+      "fail": 0,
+      "skip": 0
+    }
+  },
+  "arceos": {
+    "power": {
+      "native_state_manager": true,
+      "statuses": {
+        "On": 204,
+        "PowerCycle": 204
+      },
+      "confirmed_power": {
+        "On": "On",
+        "PowerCycle": "On"
+      },
+      "events": [
+        "power_started",
+        "power_on",
+        "power_stopped",
+        "power_started",
+        "power_on",
+        "power_good_lost"
+      ],
+      "unexpected_loss": {
+        "passed": false,
+        "redfish_at_loss": "On",
+        "automatic_restart": false,
+        "restart_window_seconds": 3,
+        "redfish_after_recovery": null
+      }
+    },
+    "conformance": {
+      "anonymous": 401,
+      "invalid_token": 401,
+      "reader_get": 200,
+      "reader_reset": 403,
+      "reader_after_logout": 401,
+      "account_etag": {
+        "passed": false,
+        "stale_status": 412,
+        "writes": [
+          {
+            "status": 204
+          },
+          {
+            "status": 204
+          },
+          {
+            "status": 204
+          },
+          {
+            "status": 204
+          }
+        ],
+        "updated": true,
+        "payload_etag_matches": false
+      }
+    },
+    "validator_exit": {
+      "board": 0,
+      "system": 0,
+      "chassis": 0,
+      "sensors": 0,
+      "session": 0,
+      "fan": 0
+    },
+    "protocol": null,
+    "interop": {
+      "exit_code": 0,
+      "pass": 34,
+      "warn": 0,
+      "fail": 0,
+      "skip": 0
+    }
+  }
+}

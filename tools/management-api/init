@@ -1,0 +1,9 @@
+#!/busybox sh
+set -eu
+/busybox insmod /failover.ko
+/busybox insmod /net_failover.ko
+/busybox insmod /virtio_mmio.ko
+/busybox insmod /virtio_net.ko
+/busybox ip addr add 10.0.2.15/24 dev eth0
+/busybox ip link set eth0 up
+exec /management-api

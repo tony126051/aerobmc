@@ -1,0 +1,7 @@
+sequence,time_ns,sensor_id,from,to
+1,0,0,Unavailable,Normal
+2,100000000,0,Normal,High
+3,300000000,0,High,Normal
+4,400000000,0,Normal,Unavailable
+5,500000000,0,Unavailable,Normal
+6,1500000000,0,Normal,Unavailable

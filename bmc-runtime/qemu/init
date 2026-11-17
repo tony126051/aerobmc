@@ -1,0 +1,12 @@
+#!/busybox sh
+set -eu
+/busybox insmod /failover.ko
+/busybox insmod /net_failover.ko
+/busybox insmod /virtio_mmio.ko
+/busybox insmod /virtio_net.ko
+/busybox ip addr add 10.0.2.15/24 dev eth0
+/busybox ip link set eth0 up
+/busybox mkdir -p /dev
+/busybox mount -t devtmpfs devtmpfs /dev
+/busybox insmod /gpio-pl061.ko
+exec /bmc-runtime 5555 --guest

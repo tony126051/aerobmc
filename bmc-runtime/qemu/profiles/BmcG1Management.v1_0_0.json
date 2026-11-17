@@ -1,0 +1,53 @@
+{
+  "SchemaDefinition": "RedfishInteroperabilityProfile.v1_0_0",
+  "ProfileName": "BmcG1Management",
+  "ProfileVersion": "1.0.0",
+  "ProfileType": "Product",
+  "OwningEntity": "BMC-G1",
+  "Purpose": "Verify the G1 simulation management surface provided by upstream bmcweb.",
+  "Protocol": {"MinVersion": "1.0.0"},
+  "Resources": {
+    "ServiceRoot": {
+      "PropertyRequirements": {
+        "RedfishVersion": {},
+        "Systems": {},
+        "Chassis": {},
+        "SessionService": {}
+      }
+    },
+    "ComputerSystemCollection": {
+      "PropertyRequirements": {"Members": {"MinCount": 1}}
+    },
+    "ComputerSystem": {
+      "URIs": ["/redfish/v1/Systems/system"],
+      "PropertyRequirements": {"Id": {}, "PowerState": {}},
+      "ActionRequirements": {
+        "Reset": {
+          "ReadRequirement": "Mandatory",
+          "Parameters": {
+            "ResetType": {"ReadRequirement": "Mandatory", "ParameterValues": ["On", "ForceOff", "PowerCycle"]}
+          }
+        }
+      }
+    },
+    "Chassis": {
+      "URIs": ["/redfish/v1/Chassis/G1"],
+      "PropertyRequirements": {"Id": {}, "ChassisType": {}, "Sensors": {}}
+    },
+    "SensorCollection": {
+      "URIs": ["/redfish/v1/Chassis/G1/Sensors"],
+      "PropertyRequirements": {"Members": {"MinCount": 3}}
+    },
+    "Sensor": {
+      "URIs": [
+        "/redfish/v1/Chassis/G1/Sensors/temperature_g1_board",
+        "/redfish/v1/Chassis/G1/Sensors/temperature_g1_inlet",
+        "/redfish/v1/Chassis/G1/Sensors/fantach_g1_fan0"
+      ],
+      "PropertyRequirements": {"Id": {}, "ReadingType": {}, "ReadingUnits": {}, "Status": {}}
+    },
+    "SessionService": {
+      "PropertyRequirements": {"ServiceEnabled": {}, "Sessions": {}, "SessionTimeout": {}}
+    }
+  }
+}

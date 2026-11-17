@@ -1,0 +1,15 @@
+[package]
+name = "bmc-qemu-replay"
+version = "0.1.0"
+edition.workspace = true
+
+[features]
+raspi4 = ["dep:axplat-aarch64-raspi"]
+
+[dependencies]
+axstd.workspace = true
+arceos_api.workspace = true
+axbmc-core = { path = "axbmc-core" }
+
+[target.'cfg(target_arch = "aarch64")'.dependencies]
+axplat-aarch64-raspi = { version = "=0.4.1", features = ["irq"], optional = true }
